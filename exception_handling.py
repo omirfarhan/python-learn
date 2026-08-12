@@ -9,3 +9,10 @@ except ZeroDivisionError:
 finally:
     result = 1
 print(result)
+
+class DoNotFoundException(Exception):
+    pass
+try:
+    raise DoNotFoundException()
+except DoNotFoundException:
+    print("Dog not found")
